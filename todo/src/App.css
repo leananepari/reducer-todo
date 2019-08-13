@@ -3,5 +3,13 @@
 }
 
 .completed {
-  text-decoration: line-through;
+  text-decoration: line-through #9bf59b;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inline-block;
 }

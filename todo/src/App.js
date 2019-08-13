@@ -8,7 +8,9 @@ function App() {
   const [state, dispatch] = useReducer(todoReducer, initialState);
 
   const addTodo = (todo) => {
-    dispatch({type: 'ADD_TODO', item: todo})
+    if(todo !== "") {
+      dispatch({type: 'ADD_TODO', item: todo})
+    }
   }
 
   const toggleCompleted = (id) => {
@@ -21,7 +23,7 @@ function App() {
  
   return (
     <div className="App">
-      <h1>Todos</h1>
+      <h1 style={{marginTop: '20px', color: '#6b396d'}}>Todos:</h1>
       <TodoList list={state} toggleCompleted={toggleCompleted} />
       <InputField addTodo={addTodo} clearCompleted={clearCompleted} />
     </div>
