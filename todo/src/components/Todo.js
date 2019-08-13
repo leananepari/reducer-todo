@@ -9,7 +9,7 @@ function Todo({ todo, toggleCompleted }) {
          onClick={() => toggleCompleted(todo.id)}
          style={{fontSize: '18px', padding: '10px'}}
     >
-      <Icon name="check" style={{color: '#9bf59b', display: `${todo.completed ? 'inline-block' : 'none'}`}} />
+      <Icon name="check" style={{color: '#9bf59b', opacity: `${todo.completed ? '1' : '0'}`}} />
       {todo.item}
     </div>
   )
