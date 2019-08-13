@@ -14,12 +14,16 @@ function App() {
   const toggleCompleted = (id) => {
     dispatch({type: 'TOGGLE_COMPLETED', id: id})
   }
+
+  const clearCompleted = () => {
+    dispatch({type: 'CLEAR_COMPLETED'})
+  }
  
   return (
     <div className="App">
       <h1>Todos</h1>
-      <TodoList list={state} toggleCompleted={toggleCompleted}/>
-      <InputField addTodo={addTodo}/>
+      <TodoList list={state} toggleCompleted={toggleCompleted} />
+      <InputField addTodo={addTodo} clearCompleted={clearCompleted} />
     </div>
   );
 }

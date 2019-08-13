@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-function InputField( { addTodo }) {
+function InputField( { addTodo, clearCompleted }) {
   const [input, setInput] = useState('');
 
   const handleChange = (e) => {
@@ -20,6 +20,7 @@ function InputField( { addTodo }) {
         addTodo(input)
         setInput('')
         }}>ADD</button>
+      <button onClick={clearCompleted}>CLEAR COMPLETED</button>
     </label>
   )
 }
